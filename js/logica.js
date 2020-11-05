@@ -56,6 +56,7 @@ function codificar(){
     var num = (/([0-9])/ig);
     var texto=document.getElementById("cadena").value;
     var seed=document.getElementById("modulo").value;
+    seed = parseInt(seed.substring(0, 15));
     if (seed>0 && !(texto.match(num))){
         var mod=seed%27;
     
@@ -63,7 +64,7 @@ function codificar(){
         document.getElementById("resultado").innerHTML = cesar.encode(
         texto, mod);
     }else{
-       document.getElementById("resultado").innerHTML = "La cadena de texto no debe contener números y el desplazamiento debe ser mayor a 0"; 
+       document.getElementById("resultado").innerHTML = "La cadena de texto no debe contener números y el desplazamiento debe ser mayor a 1"; 
     }
       
 }
@@ -72,6 +73,7 @@ function decodificar(){
     var num = (/([0-9])/ig);
     var texto=document.getElementById("cadena").value;
     var seed=document.getElementById("modulo").value;
+    seed = parseInt(seed.substring(0, 15));
     if (seed>0 && !(texto.match(num))){
         var mod=seed%27;
     
@@ -79,7 +81,7 @@ function decodificar(){
         document.getElementById("descifrado").innerHTML = cesar.decode(
         texto, mod);
     }else{
-       document.getElementById("descifrado").innerHTML = "La cadena de texto no debe contener números y el desplazamiento debe ser mayor a 0"; 
+       document.getElementById("descifrado").innerHTML = "La cadena de texto no debe contener números y el desplazamiento debe ser mayor a 1"; 
     }
        
       
