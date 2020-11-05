@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cifrado Cesar</title>
+</head>
+<body style="font-family: verdana; text-align: center; background-color: #ffd6ba;">
+    <div style="background-color: #ade8f4;">
+        <h1>CIFRADO CESAR</h1>
+        <h4>Camberos Jiménez Karla Melanie</h4>
+    </div>
+    
+    <div style=" float: left; width: 50%; background-color: #83c5be;">
+        <h3>Ingresa dentro del recuadro el texto a cifrar o descifrar</h3>
+        <textarea id="cadena" style="font-size: 120%; font-family: verdana; width: 70%;" required></textarea>
+        <h3>Ingresa el numero de desplazamientos a realizar</h3>
+        <input id="modulo" type="number" min=1 style="font-size: 120%;" required>
+        <br><br><br>
+        <input type="button" value="Cifrar" onclick="codificar()" style="background-color: #cdb4db; font-size: 120%;">
+        <input type="button" value="Descifrar" onclick="decodificar()" style="background-color: #cdb4db; font-size: 120%;">
+    </div>
+    
+    <div style="float: right; width: 50%; background-color: #43aa8b;">
+        <h3>Texto cifrado:</h3>
+        <br>
+        <textarea id="resultado" disabled style="color: black; font-family: verdana; font-size: 120%; width: 70%;"></textarea>
+        <br>
+        <h3>Texto descifrado:</h3>
+        <br>
+        <textarea id="descifrado" disabled style="color: black; font-family: verdana; font-size: 120%; width: 70%;"></textarea> 
+    </div>
+    
+    <script src="js/logica.js" ></script>
+</body>
+</html>
+
